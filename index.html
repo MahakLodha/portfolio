@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src\style.css">
+    <script src="https://kit.fontawesome.com/5c3c5c30d2.js" crossorigin="anonymous"></script> 
+    <link rel="icon" href="src\bin\Images\logo5.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="src\bin\Images\logo5.ico" type="image/x-icon"/>
+    <title>Mahak Portfolio</title>
+</head>
+<body>
+<!------------------------------HEADER--------------------------------------->
+    <div id="header">
+        <div class="container">
+            <Nav>
+                <img src="src\bin\images\logo5.png" class="Logo" width = "100" height = "100"></img>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home </a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </Nav>
+            <div class="header-text">
+                    <h1>Hi,I'm<br><span id="element"></span></h1>
+            </div>
+        </div>
+    </div>
+<!----------------------------------ABOUT------------------------------------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="src\bin\images\User.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"><span>About</span> Me</h1>
+                    <p>Thanks for stopping by my Wesite! Hi I am Mahak a 19 year old making attractive and responsive websites
+                         and learning cyber security. Make sure to hit that to see my work and
+                    folow me on social media,I promise you won't regret it :)</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experince')">Experince</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Devlopment</span><br> Web app Devlopment </li>
+                           
+                            <li><span>Cyber Security</span><br> Securing people and data </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experince">
+                        <ul>
+                            <!-- <li><span>2020 - current</span><br> Web Devlopment </li> -->
+                            <li><span>2023 - current</span><br> Web Development </li>
+                            <li><span>current</span><br> Security Analyst </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>10th exam from Maharan Mewar Public School, Udaipur</li>
+                            <li><span>2022</span><br>12th exam from MDS, Udaipur</li>
+                            <li><span>current</span><br>BTECH in CSE from PDEU, Gujarat </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!---------------------------------Services-------------------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title"><span>My</span> Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Devlopment</h2>
+                <p>I can make a responsive working website.</p>
+                <a href="#">Learn More</a>
+            </div>
+            
+            <div>
+                <i class="fa-solid fa-security"></i>
+                <h2>Cyber Security</h2>
+                <p>Do you want me to secure your websites and
+                <br>data then click on the link below.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!---------------------------Porfolio-------------------------------------------->
+
+<!---------------------------CONTACT----------------------------------------->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"><Span>Contact</Span> Me</h1>
+                    <a href="https://mail.google.com/mail"><i class="fa-sharp fa-solid fa-paper-plane"></i> lodhamahak7@gmail.com</a>
+                    <div class="social-icons">
+                        
+                        <a href="https://www.instagram.com/mahak_lodha/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://discord.com/channels/@me"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.linkedin.com/in/mahak-lodha-58251b250"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/MahakLodha"><i class="fa-brands fa-github"></i></i></a>
+                    </div>
+                    <a href="src\bin\images\Background-img-2.png" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> © 2024 Mahak.All Rights Reserved.</p>
+        </div>
+    </div>
+
+<!---------------------------JAVA SCRIPT----------------------------------------->
+     <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+        for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+        }
+    
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+
+<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ["Mahak","a Web developer","&","a Security Analyst"],
+      typeSpeed: 90,
+      backSpeed: 20,
+      loop:true
+    });
+  </script>
+<!----------------------------JAVA SCRIPT----------------------------------------->
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+Background-img-2.png
