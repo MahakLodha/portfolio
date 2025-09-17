@@ -1,191 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="src/style.css" />
-  <script src="https://kit.fontawesome.com/5c3c5c30d2.js" crossorigin="anonymous"></script> 
-  <link rel="icon" href="src/bin/images/logo5.ico" type="image/x-icon"/>
-  <title>Mahak Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://kit.fontawesome.com/5c3c5c30d2.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="src/bin/Images/logo5.ico" type="image/x-icon"/>
+    <title>Mahak Portfolio</title>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <div id="header">
-    <div class="container">
-      <nav class="glass-navbar">
-        <ul id="sidemenu">
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-        </ul>
-        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-      </nav>
-      <div class="header-text fade-in">
-        <h1>Hi, I'm <br><span id="element"></span></h1>
-      </div>
+<!------------------------------HEADER--------------------------------------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm<br><span id="element"></span></h1>
+                <p>A passionate Full Stack Developer & Cybersecurity Enthusiast</p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- ABOUT -->
-  <div id="about" class="fade-in-up">
-    <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="src/bin/images/User.jpg" alt="Mahak">
+<!----------------------------------ABOUT------------------------------------------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="src/bin/images/User.jpg" alt="Mahak Profile">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"><span>About</span> Me</h1>
+                    <p>
+                        Hi! I'm Mahak Lodha, a Computer Science student at PDEU, Gujarat.
+                        I'm passionate about creating responsive, user-centric web solutions and building secure digital systems.
+                        With hands-on experience in full-stack development and cybersecurity, I aim to craft innovative and secure web experiences.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Full Stack Development</span><br>HTML, CSS, JavaScript, Python, C++, SQL</li>
+                            <li><span>Cybersecurity</span><br>Network Security, SIEM Tools, Ethical Hacking, Burp Suite</li>
+                            <li><span>Other Skills</span><br>Linux, Bash, PowerShell, GitHub, Responsive Design</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Software Developer & QA Intern</span><br>at Advaiya (2025)</li>
+                            <li><span>Web Developer Intern</span><br>at Lipi Data (2024)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>10th - MMPS, Udaipur</li>
+                            <li><span>2022</span><br>12th - MDS, Udaipur</li>
+                            <li><span>Current</span><br>B.Tech CSE - PDEU, Gujarat (CGPA: 9.3)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="about-col-2">
-          <h1 class="sub-title"><span>About</span> Me</h1>
-          <p>
-            Hi, I'm Mahak Lodha, a passionate Full-Stack Developer and Cybersecurity Enthusiast.
-            I love building secure, responsive, and user-focused web solutions. 
-            With experience from internships and hackathons, I merge creativity with security to develop impactful projects.
-          </p>
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-          </div>
-
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>Frontend</span><br>HTML, CSS, JavaScript</li>
-              <li><span>Backend</span><br>Python, C++, SQL, PHP</li>
-              <li><span>Cybersecurity</span><br>Network Security, Web Security, SIEM</li>
-              <li><span>Other Tools</span><br>Kali Linux, Burp Suite, Git</li>
-            </ul>
-          </div>
-
-          <div class="tab-contents" id="experience">
-            <ul>
-              <li><span>Advaiya</span><br>Software Developer & QA Intern</li>
-              <li><span>CodSoft</span><br>Web Developer Intern</li>
-              <li><span>Manjari Foundation</span><br>CSSI Intern</li>
-              <li><span>HackOut2024</span><br>Top 10 Finalist – Team 4_Square</li>
-            </ul>
-          </div>
-
-          <div class="tab-contents" id="education">
-            <ul>
-              <li><span>10th</span><br>St. Gregorios Sr. Sec. School, Udaipur</li>
-              <li><span>12th</span><br>St. Gregorios Sr. Sec. School, Udaipur</li>
-              <li><span>Current</span><br>BTech in Computer Science, PDEU (CGPA: 9.25)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!-- SERVICES -->
-  <div id="services" class="fade-in-up">
+<!---------------------------------Services-------------------------------------->
+<div id="services">
     <div class="container">
-      <h1 class="sub-title"><span>My</span> Services</h1>
-      <div class="services-list">
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Full-Stack Development</h2>
-          <p>Building secure, responsive, and scalable web applications.</p>
+        <h1 class="sub-title"><span>My</span> Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Full Stack Development</h2>
+                <p>Building scalable, responsive and dynamic web applications end-to-end.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-shield-halved"></i>
+                <h2>Cybersecurity Solutions</h2>
+                <p>Providing security audits, vulnerability analysis and data protection strategies.</p>
+                <a href="#">Learn More</a>
+            </div>
         </div>
-        <div>
-          <i class="fa-solid fa-shield-halved"></i>
-          <h2>Cybersecurity</h2>
-          <p>Protecting data, networks, and applications with industry best practices.</p>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
-  <!-- PORTFOLIO -->
-  <div id="portfolio" class="fade-in-up">
+<!---------------------------Portfolio-------------------------------------------->
+<div id="portfolio">
     <div class="container">
-      <h1 class="sub-title"><span>My</span> Work</h1>
-      <div class="work-list">
-        <div class="work">
-          <img src="src/bin/images/agri.jpg" alt="AgriGenesis Project">
-          <div class="layer">
-            <h3>AgriGenesis</h3>
-            <p>A full-stack agricultural platform connecting farmers, offering crop exchange, live consultation, and data-driven fertilizer recommendations.</p>
-            <a href="https://github.com/MahakLodha/AgriGenesis"><i class="fa-solid fa-up-right-from-square"></i></a>
-          </div>
+        <h1 class="sub-title"><span>My</span> Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="src/bin/images/agrigenesis.png" alt="AgriGenesis">
+                <div class="layer">
+                    <h3>AgriGenesis</h3>
+                    <p>Full-stack agriculture platform shortlisted in top 10 at Hackathon at DAICT.</p>
+                    <a href="https://github.com/MahakLodha/AgriGenesis"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="work">
+                <div class="layer">
+                    <h3>AI Agent for employee growth</h3>
+                    <p>built using react, operRouter, Mongodband python.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
         </div>
-
-        <div class="work">
-          <img src="src/bin/images/aiagent.jpg" alt="AI Agent">
-          <div class="layer">
-            <h3>AI Agent</h3>
-            <p>An intelligent agent that answers queries, provides recommendations, and integrates APIs for enhanced user experience.</p>
-            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
-  <!-- CONTACT -->
-  <div id="contact" class="fade-in-up">
+<!---------------------------CONTACT----------------------------------------->
+<div id="Contact">
     <div class="container">
-      <div class="row">
-        <div class="contact-left">
-          <h1 class="sub-title"><span>Contact</span> Me</h1>
-          <a href="mailto:mahak.lce22@sot.pdpu.ac.in"><i class="fa-solid fa-paper-plane"></i> mahak.lce22@sot.pdpu.ac.in</a>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/mahak_lodha/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/mahak-lodha-58251b250"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/MahakLodha"><i class="fa-brands fa-github"></i></a>
-          </div>
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"><span>Contact</span> Me</h1>
+                <a href="mailto:lodhamahak7@gmail.com">
+                    <i class="fa-solid fa-paper-plane"></i> lodhamahak7@gmail.com
+                </a>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/mahak_lodha/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mahak-lodha-58251b250/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/MahakLodha"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="src/bin/images/Background-img-2.png" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
         </div>
-        <div class="contact-right">
-          <form>
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="Email" placeholder="Your Email" required>
-            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-            <button type="submit" class="btn btn2">Submit</button>
-          </form>
-        </div>
-      </div>
     </div>
     <div class="copyright">
-      <p>© 2024 Mahak. All Rights Reserved.</p>
+        <p>© 2024 Mahak Lodha. All Rights Reserved.</p>
     </div>
-  </div>
+</div>
 
-  <!-- JS -->
-  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-  <script>
+<!---------------------------JAVA SCRIPT----------------------------------------->
+<script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
+
     function opentab(tabname){
-      for(tablink of tablinks){ tablink.classList.remove("active-link"); }
-      for(tabcontent of tabcontents){ tabcontent.classList.remove("active-tab"); }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
+        for(tablink of tablinks){ tablink.classList.remove("active-link"); }
+        for(tabcontent of tabcontents){ tabcontent.classList.remove("active-tab"); }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
     }
 
     var sidemeu = document.getElementById("sidemenu");
     function openmenu(){ sidemeu.style.right = "0"; }
     function closemenu(){ sidemeu.style.right = "-200px"; }
+</script>
 
+<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+<script>
     var typed = new Typed('#element', {
-      strings: ["Mahak","a Full-Stack Developer","&","a Security Enthusiast"],
-      typeSpeed: 90,
-      backSpeed: 20,
-      loop:true
+        strings: ["Mahak", "a Full Stack Developer", "a Cybersecurity Enthusiast"],
+        typeSpeed: 90,
+        backSpeed: 20,
+        loop: true
     });
+</script>
+<script>
+  const faders = document.querySelectorAll('.container, .services-list div, .work, .contact-left, .contact-right');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.2 });
 
-    const faders = document.querySelectorAll('.fade-in, .fade-in-up');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    }, { threshold: 0.2 });
-    faders.forEach(el => observer.observe(el));
-  </script>
+  faders.forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+</script>
 
 </body>
 </html>
-
